@@ -15,7 +15,7 @@ public class GrandPrix5Ainf_gruppo8 {
      */
     public static void main(String[] args) {
         String marca = null; //assegnare il valore dal file a questa variabile
-        //istanziamo gli oggetti
+        //istanziamo gli oggettiyuyu
         car macchina = new car(marca);
     }
     
