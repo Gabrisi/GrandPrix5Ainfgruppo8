@@ -14,7 +14,9 @@ public class GrandPrix5Ainf_gruppo8 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        String marca = null; //assegnare il valore dal file a questa variabile
+        //istanziamo gli oggetti
+        car macchina = new car(marca);
     }
     
 }
