@@ -15,7 +15,7 @@ Il Simulatore di Gara del Grand Prix è un'applicazione progettata per consentir
 
 ## Utilizzo
 
-1. Avviare l'applicazione eseguendo la classe `Main.java`.
+1. Avviare l'applicazione eseguendo la classe `GrandPrix5Ainf_gruppo8.java`.
 2. Accedere con le credenziali fornite (username e password).
 3. Una volta autenticati, il giocatore può:
    - Selezionare il numero di auto da far partire contemporaneamente.
