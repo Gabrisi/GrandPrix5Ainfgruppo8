@@ -10,7 +10,7 @@ package grandprix5ainf_gruppo8;
  */
 public class car {
     String marca;
-    public void car(String marca){
+    public car(String marca){
         this.marca=marca;
     }
 }

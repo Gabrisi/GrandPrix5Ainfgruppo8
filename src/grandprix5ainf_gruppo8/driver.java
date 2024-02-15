@@ -9,5 +9,10 @@ package grandprix5ainf_gruppo8;
  * @author gabri
  */
 public class driver {
-    
+    String nome;
+    String cognome;
+    public driver(String nome, String cognome){
+            this.nome=nome;
+            this.cognome=cognome;
+    }
 }
