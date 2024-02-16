@@ -26,6 +26,30 @@ public class GrandPrix5Ainf_gruppo8 {
         player giocatore1 = new player(giocatore,"Dati.json");
         giocatore1.leggi();
         System.out.println(giocatore1.nomeFile);
+
+        //RICHIESTA DELLE INFORMAZIONI PERSONALE DELL'UTENTE
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Inserisci nome: "); //richiede l'username in input
+        String username = scanner.nextLine();//assegna l'username letto in input alla variabile "username"
+        
+        System.out.print("Inserisci password: "); //richiede la password in input
+        String passwordGiocatore = scanner.nextLine(); //assegna la password letta in input alla variabile "password"
+        
+        scanner.close(); // chiudo lo scanner
+        
+        //COPIO IL NOME E LA PASSWORD NEL FILE "File.csv"
+        try{
+            // scrivo nel buffer
+            BufferedWriter br = new BufferedWriter(new FileWriter(nomeFile1));
+            br.write(username + ";" + passwordGiocatore); 
+            br.write("\n\r");
+            // svuoto il buffer e salvo nel file i dati
+            br.flush();         
+        } catch (IOException ex) {
+            Logger.getLogger(Scrittore.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
         
         ArrayList<Vigenere> quadranti = new ArrayList<Vigenere>(); 
 
