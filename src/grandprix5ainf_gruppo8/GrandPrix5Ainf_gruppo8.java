@@ -4,9 +4,13 @@
  */
 package grandprix5ainf_gruppo8;
 
+import java.io.BufferedWriter;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.lang.System.Logger;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  *
@@ -19,7 +23,8 @@ public class GrandPrix5Ainf_gruppo8 {
         String nome = null;
         String cognome = null;
         String giocatore = null;
-        String passwordGiocatore = null;
+        String nomeFile = "File.csv";
+        
         //istanziamo gli oggetti
         car macchina1 = new car(marca);
         driver guidatore1 = new driver(nome,cognome);
@@ -36,21 +41,34 @@ public class GrandPrix5Ainf_gruppo8 {
         System.out.print("Inserisci password: "); //richiede la password in input
         String passwordGiocatore = scanner.nextLine(); //assegna la password letta in input alla variabile "password"
         
+        System.out.print("Inserisci il numero delle macchine che vuoi: "); //richiede il numero delle macchine in input
+        int nMacchine = scanner.nextLine();//assegna l'username letto in input alla variabile "username"
+        
         scanner.close(); // chiudo lo scanner
+        
+        //RICHIESTA SE SI VUOLE TRUCCARE UNA MACCHINA
+        for(int i=0; i<nMacchine; i++) {
+	System.out.print("Vuoi truccare la macchina " + i + "?");
+        String risposta = scanner.nextLine();
+        if("si".equals(risposta)){
+            System.out.print("Hai truccato la macchina numero " + i + "!");
+        }else{
+            risposta = null;
+        }
         
         //COPIO IL NOME E LA PASSWORD NEL FILE "File.csv"
         try{
             // scrivo nel buffer
-            BufferedWriter br = new BufferedWriter(new FileWriter(nomeFile1));
+            BufferedWriter br = new BufferedWriter(new FileWriter(nomeFile));
             br.write(username + ";" + passwordGiocatore); 
             br.write("\n\r");
             // svuoto il buffer e salvo nel file i dati
             br.flush();         
         } catch (IOException ex) {
-            Logger.getLogger(Scrittore.class.getName()).log(Level.SEVERE, null, ex);
+            System.err.println("Errore metodo join");
         }
         
-        
+        //CIFRO LA PASSWORD CON IL CIFRARIO DI VIGENERE
         ArrayList<Vigenere> quadranti = new ArrayList<Vigenere>(); 
 
         Matrice matrix=new Matrice("TPSIT");
@@ -79,6 +97,6 @@ public class GrandPrix5Ainf_gruppo8 {
         
         String passwordCifrata = matrix.cifra(passwordGiocatore);
         
+        }
     }
-    
 }
