@@ -4,13 +4,14 @@
  */
 package grandprix5ainf_gruppo8;
 
+import java.util.Scanner;
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.lang.System.Logger;
 import java.util.ArrayList;
-import java.util.Scanner;
+import java.io.*;
 
 /**
  *
@@ -25,7 +26,7 @@ public class GrandPrix5Ainf_gruppo8 {
         String giocatore = null;
         String nomeFile = "File.csv";
         
-        //istanziamo gli oggetti
+        //INSTANZIAMO GLI OGGETTI
         car macchina1 = new car(marca);
         driver guidatore1 = new driver(nome,cognome);
         player giocatore1 = new player(giocatore,"Dati.json");
@@ -42,7 +43,7 @@ public class GrandPrix5Ainf_gruppo8 {
         String passwordGiocatore = scanner.nextLine(); //assegna la password letta in input alla variabile "password"
         
         System.out.print("Inserisci il numero delle macchine che vuoi: "); //richiede il numero delle macchine in input
-        int nMacchine = scanner.nextLine();//assegna l'username letto in input alla variabile "username"
+        int nMacchine = scanner.nextInt();//assegna l'username letto in input alla variabile "username"
         
         scanner.close(); // chiudo lo scanner
         
