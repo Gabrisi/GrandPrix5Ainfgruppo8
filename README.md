@@ -36,7 +36,7 @@ Se desideri contribuire al Simulatore di Gara del Grand Prix, segui questi passa
 
 ## Licenza
 
-Il Simulatore di Gara del Grand Prix è distribuito sotto la licenza 5Ainf. Per ulteriori informazioni, consulta il file `LICENSE`.
+Il Simulatore di Gara del Grand Prix è distribuito sotto la licenza 5AINF.
 
 ## Contatti
 
