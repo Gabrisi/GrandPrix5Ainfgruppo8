@@ -45,18 +45,19 @@ public class GrandPrix5Ainf_gruppo8 {
         System.out.print("Inserisci il numero delle macchine che vuoi: "); //richiede il numero delle macchine in input
         int nMacchine = scanner.nextInt();//assegna l'username letto in input alla variabile "username"
         
-        scanner.close(); // chiudo lo scanner
+        //scanner.close(); // chiudo lo scanner
         
         //RICHIESTA SE SI VUOLE TRUCCARE UNA MACCHINA
-        for(int i=0; i<nMacchine; i++) {
+        for(int i=1; i<nMacchine; i++) {
 	System.out.print("Vuoi truccare la macchina " + i + "?");
         String risposta = scanner.nextLine();
+        System.out.println(risposta);
         if("si".equals(risposta)){
             System.out.print("Hai truccato la macchina numero " + i + "!");
         }else{
             risposta = null;
+            }
         }
-        
         //COPIO IL NOME E LA PASSWORD NEL FILE "File.csv"
         try{
             // scrivo nel buffer
@@ -100,4 +101,4 @@ public class GrandPrix5Ainf_gruppo8 {
         
         }
     }
-}
+
