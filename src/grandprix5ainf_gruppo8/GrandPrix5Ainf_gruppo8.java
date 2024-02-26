@@ -58,6 +58,7 @@ public class GrandPrix5Ainf_gruppo8 {
             risposta = null;
             }
         }
+        
         //COPIO IL NOME E LA PASSWORD NEL FILE "File.csv"
         try{
             // scrivo nel buffer
@@ -69,6 +70,9 @@ public class GrandPrix5Ainf_gruppo8 {
         } catch (IOException ex) {
             System.err.println("Errore metodo join");
         }
+        
+        //LE MACCHINE INSERITE OTTENGONO UNA VELOCITA' RANDOM
+        
         
         //CIFRO LA PASSWORD CON IL CIFRARIO DI VIGENERE
         ArrayList<Vigenere> quadranti = new ArrayList<Vigenere>(); 
@@ -101,4 +105,3 @@ public class GrandPrix5Ainf_gruppo8 {
         
         }
     }
-
