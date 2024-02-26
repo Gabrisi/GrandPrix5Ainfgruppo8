@@ -24,7 +24,8 @@ public class GrandPrix5Ainf_gruppo8 {
         String nome = null;
         String cognome = null;
         String giocatore = null;
-        String nomeFile = "File.csv";
+        String nomeFile = "informazioniUtente.csv";
+        int nMacchine;
         
         //INSTANZIAMO GLI OGGETTI
         car macchina1 = new car(marca);
@@ -42,8 +43,13 @@ public class GrandPrix5Ainf_gruppo8 {
         System.out.print("Inserisci password: "); //richiede la password in input
         String passwordGiocatore = scanner.nextLine(); //assegna la password letta in input alla variabile "password"
         
-        System.out.print("Inserisci il numero delle macchine che vuoi: "); //richiede il numero delle macchine in input
-        int nMacchine = scanner.nextInt();//assegna l'username letto in input alla variabile "username"
+        do {
+            System.out.print("Inserisci il numero delle macchine che vuoi: "); //richiede il numero delle macchine in input
+            nMacchine = scanner.nextInt();//assegna l'username letto in input alla variabile "username"
+            if(nMacchine == 0){
+                System.out.println("Devi inserire un numero maggiore di 0!!");
+            }
+        } while (nMacchine <= 0);
         
         //scanner.close(); // chiudo lo scanner
         
