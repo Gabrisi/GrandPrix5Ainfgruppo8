@@ -23,7 +23,6 @@ public class player {
         int i; 
         try { 
             //1) apro il file
-            System.out.println(nomeFile);
             fr = new FileReader(nomeFile);
             //2) leggo carattere per carattere e lo stampo 
             while ((i=fr.read()) != -1)
