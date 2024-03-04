@@ -1,43 +1,48 @@
-# Simulatore di Gara del Grand Prix
+# Grand Prix 5Ainf - Gruppo 8
 
-Il Simulatore di Gara del Grand Prix è un'applicazione progettata per consentire l'accesso riservato a ogni giocatore, simulando una gara automobilistica. Il programma gestisce i dati dei piloti, delle loro auto e dei giocatori in modo da offrire un'esperienza coinvolgente e realistica.
+Questo progetto è un simulatore di gara automobilistica creato dal Gruppo 8 del corso 5AINF. Il programma consente agli utenti di partecipare ad una gara automobilistica virtuale, gestendo diverse funzionalità come la creazione di macchine, la selezione di circuiti e la definizione dei parametri della gara.
 
-## Requisiti
+## Funzionalità principali:
 
-- Java Development Kit (JDK) 8 o versione successiva
-- Ambiente di sviluppo Java (Eclipse, IntelliJ IDEA, NetBeans, ecc.)
+1. **LogIn e registrazione**:
+   - L'utente può effettuare il login inserendo il proprio nome utente e la password.
+   - Le credenziali degli utenti vengono crittografate utilizzando il cifrario di Vigenère prima di essere salvate su un file.
 
-## Installazione
+2. **Configurazione della gara**:
+   - L'utente può aggiungere un numero specifico di macchine alla gara, specificando la marca, il modello e l'anno di produzione.
+   - È possibile selezionare se truccare una delle macchine.
 
-1. Clonare o scaricare il repository dal seguente link: [Simulatore di Gara del Grand Prix Repository](https://github.com/Gabrisi/GrandPrix5Ainfgruppo8/)
-2. Importare il progetto nel tuo ambiente di sviluppo Java preferito.
-3. Assicurarsi che il JDK 8 o una versione successiva sia configurato come ambiente di esecuzione del progetto.
+3. **Selezione del circuito**:
+   - L'utente può scegliere tra una lista di circuiti disponibili per la gara.
 
-## Utilizzo
+4. **Definizione dei giri della gara**:
+   - L'utente può specificare il numero di giri necessari per completare la gara.
 
-1. Avviare l'applicazione eseguendo la classe `GrandPrix5Ainf_gruppo8.java`.
-2. Accedere con le credenziali fornite (username e password).
-3. Una volta autenticati, il giocatore può:
-   - Selezionare il numero di auto da far partire contemporaneamente.
-   - Scegliere il circuito su cui gareggiare.
-   - Impostare la lunghezza del circuito, il numero di giri e il numero di possibili pit stop.
-   - Decidere se truccare una macchina o fermarne una per un incidente, e se far intervenire la safety car.
-4. Durante la gara, il giudice di gara comunicherà l'inizio e la fine della gara, mostrerà l'avanzamento delle auto e notificherà situazioni anomale.
-5. Al termine della gara, il giudice di gara comunicherà il vincitore e salverà la classifica in un file.
+5. **Simulazione della gara**:
+   - Il programma simula la gara utilizzando le informazioni fornite dall'utente e mostra il risultato finale.
 
-## Contribuzione
+## Struttura del progetto:
 
-Se desideri contribuire al Simulatore di Gara del Grand Prix, segui questi passaggi:
-1. Forka il repository.
-2. Crea un branch per la tua modifica (`git checkout -b feature/nome-feature`).
-3. Committa le tue modifiche (`git commit -am 'Aggiunta una nuova feature'`).
-4. Pusha il branch su GitHub (`git push origin feature/nome-feature`).
-5. Invia una pull request.
+Il progetto è strutturato in diverse classi che gestiscono le varie funzionalità:
 
-## Licenza
+- `driver`: rappresenta un pilota con nome e cognome.
+- `player`: gestisce l'utente del gioco, memorizzando le sue informazioni personali e fornendo funzionalità per la lettura e la scrittura su file.
+- `car`: rappresenta una macchina con marca, modello, anno di produzione e velocità.
+- `circuito`: definisce un circuito con nome, numero e lunghezza.
+- `giudice`: gestisce il processo di inizio e di fine della gara, gestisce la memorizzazione della classifica in un file e annuncia il vincitore.
+- `Vigenere` e `Matrice`: classi per la crittografia delle password utilizzando il cifrario di Vigenère.
 
-Il Simulatore di Gara del Grand Prix è distribuito sotto la licenza 5AINF.
+## Istruzioni per l'esecuzione:
 
-## Contatti
+1. Esegui il programma e accedi con il tuo nome utente e password.
+2. Aggiungi le macchine con cui desideri partecipare alla gara.
+3. Seleziona il circuito su cui desideri gareggiare.
+4. Specifica il numero di giri necessari per completare la gara.
+5. Avvia la simulazione della gara e osserva il risultato finale.
 
-Per domande, segnalazioni di bug o suggerimenti, contatta il team di sviluppo
+## Sviluppatori:
+
+Questo progetto è stato sviluppato dal Gruppo 8 del corso 5Ainf. I membri del gruppo sono:
+
+- Gabriele (gabri)
+- @SilvioOddo
