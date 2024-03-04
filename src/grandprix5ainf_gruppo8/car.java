@@ -54,32 +54,31 @@ public class car extends Thread {
         this.anno = anno;
     }
     
-    public int getdistanzapercorsa() {
+    public int getDistanzaPercorsa() {
         return distanzaPercorsa;
     }
     
-public static void simulateRace(ArrayList<car> cars, int circuitLength,int velocita) {
+    public static void simulazioneGara(ArrayList<car> cars, int circuitLength,int velocita) {
         for (car car : cars) {
-            car.start(); // Start each car thread
+            car.start();
         }
 
-        // Wait for all cars to finish the race
         for (car car : cars) {
             try {
                 car.join();
             } catch (InterruptedException e) {
-               System.out.println("errore nel metodo join");
+               System.out.println("Errore nel metodo join");
             }
         }
 
-        // Sort cars based on the distance covered (descending order)
-        Collections.sort(cars, Comparator.comparingInt(car::getdistanzapercorsa).reversed());
+        //ORDINA LE AUTO IN BASE ALLA DISTANZA PERCORSA (ORDINE DECRESCENTE)
+        Collections.sort(cars, Comparator.comparingInt(car::getDistanzaPercorsa).reversed());
 
-        // Print the race results
-        System.out.println("risultrati della gara:");
+        //STAMPA I RISULTATI DELLA GARA
+        System.out.println("\n[Giudice] Risultrati della gara:");
         int position = 1;
         for (car car : cars) {
-            System.out.println("Posizione " + position + ": " + car.getMarca() + " " + car.getModello() + " - distanza percorsa: " + car.getdistanzapercorsa()+velocita + " metri");
+            System.out.println("Posizione " + position + ": " + car.getMarca() + " " + car.getModello() + " - distanza percorsa: " + car.getDistanzaPercorsa()+velocita + " metri");
             position++;
         }
     }
