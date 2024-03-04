@@ -139,9 +139,8 @@ public class GrandPrix5Ainf_gruppo8 {
             BufferedWriter br = new BufferedWriter(new FileWriter(nomeFile));
             br.write(username + ";" + passwordCifrata); 
             br.write("\n\r");
-            //svuoto il buffer e salvo nel file i dati
-            br.flush();         
-        } catch (IOException ex) {
+            br.flush(); //svuoto il buffer e salvo nel file i dati         
+        } catch (IOException ex) { //eccezione controllata
             System.err.println("Errore metodo join");
         }
         
