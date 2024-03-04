@@ -186,7 +186,15 @@ public class GrandPrix5Ainf_gruppo8 {
         
         giudice giud1 = new giudice("Giudice");
         giud1.inizioGara();
-        //simuliamo la gara
-        giud1.fineGara();
-    }
+        
+        int circuitoGiri = circuitoArray[numeroCircuito-1].getLunghezza() * nGiri;
+        for (car car : autoList) {
+            System.out.println("Simulazione gara per " + car.getMarca() + " " + car.getModello());
+            int velocitaGiri = car.velocita;
+            car.simulateRace(autoList, circuitoGiri, velocitaGiri);
+            System.out.println(); // Aggiungi una riga vuota tra le simulazioni delle gare delle diverse auto
+        }
+        
+        giud1.fineGara();  
+ }
 }
