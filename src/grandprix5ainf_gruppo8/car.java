@@ -48,4 +48,9 @@ public class car extends Thread {
     public void setAnno(int anno) {
         this.anno = anno;
     }
+    
+    @Override
+    public void run(){
+        
+    }
 }

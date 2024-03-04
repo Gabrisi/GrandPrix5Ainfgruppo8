@@ -14,6 +14,7 @@ import java.io.IOException;
 public class player {
     String giocatore;
     String nomeFile;
+    
     public player(String giocatore, String nomeFile){
         this.giocatore=giocatore;
         this.nomeFile=nomeFile;

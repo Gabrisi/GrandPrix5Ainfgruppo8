@@ -11,6 +11,7 @@ package grandprix5ainf_gruppo8;
 public class driver {
     String nome;
     String cognome;
+    
     public driver(String nome, String cognome){
             this.nome=nome;
             this.cognome=cognome;

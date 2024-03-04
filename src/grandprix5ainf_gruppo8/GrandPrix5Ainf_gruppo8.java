@@ -183,5 +183,9 @@ public class GrandPrix5Ainf_gruppo8 {
             }
         } while (nGiri <= 0);
         System.out.println("\n[Giudice] Servono " + nGiri + " giri per terminare la gara!!");
+        
+        giudice giud1 = new giudice();
+        giudice.inizioGara();
+        
     }
 }
