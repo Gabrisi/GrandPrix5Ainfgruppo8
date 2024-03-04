@@ -150,7 +150,7 @@ public class GrandPrix5Ainf_gruppo8 {
         System.out.println("\n[Giudice] I circuiti sono:");
         circuito[] circuitoArray = new circuito[3];
         circuitoArray[0] = new circuito("Monza", 1 , 700);
-        circuitoArray[1] = new circuito("Milano", 2 , 600);
+        circuitoArray[1] = new circuito("Imola", 2 , 600);
         circuitoArray[2] = new circuito("Montecarlo", 3 , 800);        
         //si potrebbe pensare ad un'array dinamico di circuiti dove far inserire agli utenti nuovi circuiti
         
@@ -184,8 +184,8 @@ public class GrandPrix5Ainf_gruppo8 {
         } while (nGiri <= 0);
         System.out.println("\n[Giudice] Servono " + nGiri + " giri per terminare la gara!!");
         
-        giudice giud1 = new giudice();
-        giudice.inizioGara();
+        giudice giud1 = new giudice("Giudice");
+        giud1.inizioGara();
         
     }
 }
