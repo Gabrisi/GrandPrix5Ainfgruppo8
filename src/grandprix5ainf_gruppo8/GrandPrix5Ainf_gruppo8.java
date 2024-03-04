@@ -187,5 +187,8 @@ public class GrandPrix5Ainf_gruppo8 {
         giudice giud1 = new giudice("Giudice");
         giud1.inizioGara();
         
+        //simuliamo la gara
+        
+        giud1.fineGara();
     }
 }
