@@ -189,12 +189,11 @@ public class GrandPrix5Ainf_gruppo8 {
         
         int circuitoGiri = circuitoArray[numeroCircuito-1].getLunghezza() * nGiri;
         for (car car : autoList) {
-            System.out.println("Simulazione gara per " + car.getMarca() + " " + car.getModello());
+            System.out.println("\nSimulazione gara per " + car.getMarca() + " " + car.getModello());
             int velocitaGiri = car.velocita;
-            car.simulateRace(autoList, circuitoGiri, velocitaGiri);
+            car.simulazioneGara(autoList, circuitoGiri, velocitaGiri);
             System.out.println(); // Aggiungi una riga vuota tra le simulazioni delle gare delle diverse auto
         }
-        
         giud1.fineGara();  
- }
+    }
 }
