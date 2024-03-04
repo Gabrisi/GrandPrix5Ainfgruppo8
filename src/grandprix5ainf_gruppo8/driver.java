@@ -8,12 +8,18 @@ package grandprix5ainf_gruppo8;
  *
  * @author gabri
  */
-public class driver {
+public class giudice {
     String nome;
-    String cognome;
-    
-    public driver(String nome, String cognome){
-            this.nome=nome;
-            this.cognome=cognome;
+
+    public giudice(String nome){
+        this.nome = nome;
     }
+    
+    public void inizioGara(){
+        System.out.println("\nInizio Gara!!");
+    }
+    
+    public void fineGara(){
+        System.out.println("\nFine Gara!!");
+    } 
 }
