@@ -27,9 +27,13 @@ public class GrandPrix5Ainf_gruppo8 {
         String giocatore = null; 
         String nomeFile = "informazioniUtente.csv";
         int nMacchine;
-        int nMacchinaTruccata;
+        int nMacchinaTruccata = 0;
         int numeroCircuito;
-        int n = 0;
+        int nGiri;
+        int flag = 0;
+        int contatore1 = 0;
+        int contatore2 = 0;
+        int contatore3 = 0;
         
         //INSTANZIAMO GLI OGGETTI
         driver guidatore1 = new driver(nome,cognome);
@@ -40,19 +44,19 @@ public class GrandPrix5Ainf_gruppo8 {
         Scanner scanner = new Scanner(System.in);
         ArrayList<car> autoList = new ArrayList<>();
         
-        System.out.print("Inserisci nome: "); //richiede l'username in input
+        System.out.print("[LogIn] Inserisci nome: "); //richiede l'username in input
         String username = scanner.nextLine();//assegna l'username letto in input alla variabile "username"
         String usernameUpper = username.toUpperCase();
         
-        System.out.print("Inserisci password: "); //richiede la password in input
+        System.out.print("[LogIn] Inserisci password: "); //richiede la password in input
         String passwordGiocatore = scanner.nextLine(); //assegna la password letta in input alla variabile "password"
         String passwordUpper = passwordGiocatore.toUpperCase();
         
         do {
-            System.out.print("\nInserisci il numero di auto che desideri aggiungere: ");
+            System.out.print("\n[Giudice] Inserisci il numero di auto che desideri aggiungere: ");
             nMacchine = scanner.nextInt();
             if(nMacchine == 0){
-                System.out.println("Devi inserire un numero maggiore di 0!!");
+                System.out.println("[Giudice] Devi inserire un numero maggiore di 0!!");
             }
         } while (nMacchine <= 0);
         scanner.nextLine();
@@ -60,13 +64,13 @@ public class GrandPrix5Ainf_gruppo8 {
         //CICLO PER AGGIUNGERE LE MACCHINE NELL'ARRAY LIST
         for (int i = 0; i < nMacchine; i++) {
             Random random = new Random();
-            int contatore = i+1;
-            System.out.print("\nMacchina n" + contatore + ": " );
-            System.out.print("\nInserisci la marca dell'auto: ");
+            contatore1 = i+1;
+            System.out.print("\nMacchina n" + contatore1 + ": " );
+            System.out.print("\n[Giudice] Inserisci la marca dell'auto: ");
             String marca = scanner.nextLine();
-            System.out.print("Inserisci il modello dell'auto: ");
+            System.out.print("[Giudice] Inserisci il modello dell'auto: ");
             String modello = scanner.nextLine();
-            System.out.print("Inserisci l'anno di produzione dell'auto: ");
+            System.out.print("[Giudice] Inserisci l'anno di produzione dell'auto: ");
             int anno = scanner.nextInt();
             
             //LE MACCHINE INSERITE OTTENGONO UNA VELOCITA' RANDOM
@@ -77,27 +81,28 @@ public class GrandPrix5Ainf_gruppo8 {
         }
 
         //STAMPA TUTTE LE MACCHINE INSERITE
-        System.out.println("\nLe auto aggiunte sono: ");
+        System.out.println("\n[Giudice] Le auto aggiunte sono: ");
         for (car car : autoList) {
-            n = n + 1;
-            System.out.println("Macchina n" + n + "| Marca: " + car.getMarca() + ", Modello: " + car.getModello() + ", Anno: " + car.getAnno());
+            contatore2 = contatore2 + 1;
+            System.out.println("Macchina n" + contatore2 + "| Marca: " + car.getMarca() + ", Modello: " + car.getModello() + ", Anno: " + car.getAnno());
         }
           
         //RICHIESTA SE SI VUOLE TRUCCARE UNA MACCHINA - BISOGNA FAR SI CHE LA VELOCITA' DELLA MACCHINA TRUCCATA AUMENTI
-        System.out.println("\nVuoi truccare una macchina? (0: Si) (1: No) ");
+        System.out.println("\n[Giudice] Vuoi truccare una macchina? (0: Si) (1: No) ");
         int risposta = scanner.nextInt();
         if(risposta == 0){
             do {
-                System.out.println("\nChe macchina vuoi truccare? ");
+                System.out.println("\n[Giudice] Che macchina vuoi truccare? ");
                 nMacchinaTruccata = scanner.nextInt();
                     if(nMacchinaTruccata == 0){
-                        System.out.println("Devi inserire un numero maggiore di 0!! ");
+                        System.out.println("[Giudice] Devi inserire un numero maggiore di 0!! ");
                     }
                     if(nMacchinaTruccata > nMacchine){
-                           System.out.println("Devi inserire un numero compreso da 1 a " + nMacchine + "!! ");
+                           System.out.println("[Giudice] Devi inserire un numero compreso da 1 a " + nMacchine + "!! ");
                     }
             } while (nMacchinaTruccata <= 0 || nMacchinaTruccata > 3);
         }
+        System.out.print("\n[Giudice] Ottimo! hai truccato la macchina numero: " + nMacchinaTruccata + "!!");
                 
         //CIFRO LA PASSWORD CON IL CIFRARIO DI VIGENERE
         ArrayList<Vigenere> quadranti = new ArrayList<Vigenere>(); 
@@ -141,6 +146,8 @@ public class GrandPrix5Ainf_gruppo8 {
         }
         
         //CREIAMO I CIRCUITI
+        System.out.println("\n");
+        System.out.println("\n[Giudice] I circuiti sono:");
         circuito[] circuitoArray = new circuito[3];
         circuitoArray[0] = new circuito("Monza", 1 , 700);
         circuitoArray[1] = new circuito("Milano", 2 , 600);
@@ -149,20 +156,32 @@ public class GrandPrix5Ainf_gruppo8 {
         
         //STAMPARE LA LISTA DEI CIURCUITI
         for (int i = 0; i < 3; i++) {
-            n = n + 1;
-            System.out.println("Circuito n" + n + "| " + circuitoArray[i]); //da sistemare
+            contatore3 = contatore3 + 1;
+            System.out.println("Circuito n" + contatore3 + "| Nome Circuito: " + circuitoArray[i].getNomeCircuito() + ", Numero Circuito: " + circuitoArray[i].getNumCircuito() + ", Lunghezza: " + circuitoArray[i].getLunghezza()); //da sistemare
         }
         
         //L'UTENTE SCEGLIE IL CIRCUITO SU CUI FAR CORRERE LE SUE MACCHINE
         do {
-            System.out.print("\nInserisci il numero del circuito su cui vuoi gareggiare (il numero deve andare da 1 a 3): ");
+            System.out.print("\n[Giudice] Inserisci il numero del circuito su cui vuoi gareggiare (il numero deve andare da 1 a 3): ");
             numeroCircuito = scanner.nextInt();
             if(numeroCircuito == 0){
-                System.out.println("Devi inserire un numero maggiore di 0!! ");
+                System.out.println("[Giudice] Devi inserire un numero maggiore di 0!! ");
             }
             if(numeroCircuito > 3){
-                System.out.println("Devi inserire un numero compreso da 1 a 3!! ");
+                System.out.println("[Giudice] Devi inserire un numero compreso da 1 a 3!! ");
             }
-        } while (numeroCircuito <= 0 || numeroCircuito > 3);   
+        } while (numeroCircuito <= 0 || numeroCircuito > 3); 
+        System.out.print("\n[Giudice] Ottimo! hai scelto il circuito di " + circuitoArray[numeroCircuito-1].getNomeCircuito() + "!!");
+        
+        //L'UTENTE SCEGLIE I NUMERI DEI GIRI NECESSARI PER TERMINARE LA GARA
+        System.out.println("\n");
+        do {
+            System.out.println("[Giudice] Quanti numeri di giri sono necessari per terminare la gara? ");
+            nGiri = scanner.nextInt();
+            if(nGiri == 0){
+                System.out.println("[Giudice] Devi inserire un numero maggiore di 0!!");
+            }
+        } while (nGiri <= 0);
+        System.out.println("\n[Giudice] Servono " + nGiri + " giri per terminare la gara!!");
     }
 }
