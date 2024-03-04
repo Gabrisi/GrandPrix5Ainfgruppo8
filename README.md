@@ -44,7 +44,7 @@ Il progetto è strutturato in diverse classi che gestiscono le varie funzionalit
 
 Questo progetto è stato sviluppato dal Gruppo 8 del corso 5AINF. I membri del gruppo sono:
 
-- Gabriele (gabri)
+- Gabriele (gabrisi)
 - Silvio (SilvioOddo)
 - Cristian (RamacciCri)
 - Kelvin (isikel)
