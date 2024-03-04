@@ -47,3 +47,4 @@ Questo progetto è stato sviluppato dal Gruppo 8 del corso 5AINF. I membri del g
 - Gabriele (gabri)
 - Silvio (SilvioOddo)
 - Cristian (RamacciCri)
+- Kelvin (isikel)
