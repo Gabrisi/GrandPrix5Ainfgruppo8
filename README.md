@@ -1,6 +1,6 @@
 # Grand Prix 5AINF - Gruppo 8
 
-Questo progetto è un simulatore di gara automobilistica creato dal Gruppo 8 del corso 5AINF. Il programma consente agli utenti di partecipare ad una gara automobilistica virtuale, gestendo diverse funzionalità come la creazione di macchine, la selezione di circuiti e la definizione dei parametri della gara.
+Questo progetto è un simulatore di gara automobilistica creato dal Gruppo 8 della classe 5AINF. Il programma consente agli utenti di partecipare ad una gara automobilistica virtuale, gestendo diverse funzionalità come la creazione di macchine, la selezione di circuiti e la definizione dei parametri della gara.
 
 ## Funzionalità principali:
 
@@ -42,7 +42,7 @@ Il progetto è strutturato in diverse classi che gestiscono le varie funzionalit
 
 ## Sviluppatori:
 
-Questo progetto è stato sviluppato dal Gruppo 8 del corso 5AINF. I membri del gruppo sono:
+Questo progetto è stato sviluppato dal Gruppo 8 della classe 5AINF. I membri del gruppo sono:
 
 - Gabriele (gabrisi)
 - Silvio (SilvioOddo)
