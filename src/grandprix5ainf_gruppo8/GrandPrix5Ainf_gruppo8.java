@@ -100,10 +100,10 @@ public class GrandPrix5Ainf_gruppo8 {
                     if(nMacchinaTruccata > nMacchine){
                            System.out.println("[Giudice] Devi inserire un numero compreso da 1 a " + nMacchine + "!! ");
                     }
+            System.out.print("\n[Giudice] Ottimo! hai truccato la macchina numero: " + nMacchinaTruccata + "!!");
             } while (nMacchinaTruccata <= 0 || nMacchinaTruccata > 3);
         }
-        System.out.print("\n[Giudice] Ottimo! hai truccato la macchina numero: " + nMacchinaTruccata + "!!");
-                
+                        
         //CIFRO LA PASSWORD CON IL CIFRARIO DI VIGENERE
         ArrayList<Vigenere> quadranti = new ArrayList<Vigenere>(); 
 
